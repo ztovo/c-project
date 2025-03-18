@@ -1,3 +1,36 @@
-﻿Console.WriteLine("Hello, World!");
-Console.WriteLine("The current time is " + DateTime.Now);
-Console.WriteLine("hello,c#");
+﻿using System;
+namespace RectangleApplication
+{
+    class Rectangle
+    {
+        // 成员变量
+        double length;
+        double width;
+        public void Acceptdetails()
+        {
+            length = 4.5;    
+            width = 3.5;
+        }
+        public double GetArea()
+        {
+            return length * width;
+        }
+        public void Display()
+        {
+            Console.WriteLine("长: {0}", length);
+            Console.WriteLine("宽: {0}", width);
+            Console.WriteLine("Area: {0}", GetArea());
+        }
+    }
+    
+    class ExecuteRectangle
+    {
+        static void Main(string[] args)
+        {
+            Rectangle r = new Rectangle();
+            r.Acceptdetails();
+            r.Display();
+            Console.ReadLine();
+        }
+    }
+}
